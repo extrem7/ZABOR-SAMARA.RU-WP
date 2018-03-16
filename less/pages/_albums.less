@@ -1,0 +1,49 @@
+.album-item {
+  margin-bottom: 10px;
+  p {
+    color: @dark;
+    font-family: "Myriad Pro", sans-serif;
+    font-size: 14px;
+    padding: 0 20px 15px;
+  }
+  &:last-child {
+    margin-bottom: 50px;
+  }
+  .section-title {
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    text-align: left;
+    &:before {
+      right: auto;
+      bottom: -20px;
+    }
+    &:after {
+      width: 100%;
+      bottom: -20px;
+    }
+  }
+  .d-flex {
+    padding: 0 20px;
+  }
+  a {
+    display: flex;
+    .size(125px, 90px);
+    margin-bottom: 7px;
+    opacity: .85;
+    transition: opacity .2s;
+    &:hover {
+      opacity: 1;
+    }
+    img {
+      .size(100%);
+      max-width: 100%;
+      max-height: 100%;
+      border: 3px solid transparent;
+      transition: border .2s;
+      &:hover {
+        border: 3px solid @green;
+      }
+    }
+  }
+}

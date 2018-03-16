@@ -1,0 +1,142 @@
+.modal {
+  .modal-dialog {
+    max-width: unset;
+    justify-content: center;
+  }
+  .modal-content {
+    .size(710px, 232px);
+    border: none;
+    .border-radius(0);
+    padding: 40px 40px 5px 110px;
+    border-bottom: 7px solid @green;
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    .size(40px);
+    background: url("../img/close.png");
+    right: -20px;
+    top: -20px;
+    opacity: 1 !important;
+  }
+  .hand {
+    position: absolute;
+    bottom: -7px;
+    left: -130px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: @dark;
+    margin-bottom: 35px;
+    .time {
+      color: @blue;
+    }
+  }
+  .flex-form {
+    display: flex;
+  }
+  input:not(.submit) {
+    z-index: 1;
+    position: relative;
+    border: none;
+    background: transparent;
+    color: @dark;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #90d115;
+    transition: border .2s;
+    width: 165px;
+
+    &::-webkit-input-placeholder {
+      color: #7c7b7b;
+    }
+    &::-moz-placeholder {
+      color: #7c7b7b;
+    }
+    &:-ms-input-placeholder {
+      color: #7c7b7b;
+    }
+  }
+  .wpcf7-response-output {
+    text-align: center;
+    position: relative;
+    top: -12px;
+    z-index: 3;
+    background: white;
+    color: @dark;
+    &.wpcf7-mail-sent-ok {
+      display: none !important;
+    }
+  }
+  .form-good {
+    color: @blue;
+    font-family: Verdana, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    border-bottom: 1px solid @blue;
+  }
+  .politics {
+    position: absolute;
+    font-family: Verdana, sans-serif;
+    font-size: 9px;
+    color: #bcbcbc;
+    bottom: 3px;
+    right: 20px;
+    a {
+      color: #a3a1a1;
+      text-decoration: underline;
+    }
+  }
+}
+
+.modal-vertical-center {
+  .modal-dialog {
+    margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .modal {
+    .hand {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    .modal-content {
+      text-align: center;
+      width: auto;
+      height: auto;
+      max-width: ~"calc(100% - 50px)";
+      padding: 20px 20px 5px 20px;
+    }
+    .time {
+      display: block;
+    }
+    .flex-form {
+      flex-direction: column;
+      align-items: center !important;
+      input {
+        margin-bottom: 15px;
+      }
+    }
+    .politics {
+      position: unset;
+      br {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.footer {
+  .top {
+    background: url("../img/footer-back.png") no-repeat center;
+    background-size: cover;
+    .container {
+      justify-content: space-between;
+    }
+    .menu {
+      .main .menu();
+      padding: 30px 0;
+      width: 570px;
+      border-bottom: none;
+      a {
+        color: #8292ab !important;
+        &:after {
+          display: none;
+        }
+        &:hover, &.active {
+          color: white !important;
+        }
+      }
+      .sub-menu {
+        display: none !important;
+      }
+    }
+    .phone {
+      .main .right .phone();
+    }
+    .btn-gray {
+      margin-left: 20px;
+    }
+  }
+  .bottom {
+    padding: 10px 0;
+    background-color: #2e3b4f;
+    p {
+      font-size: 12px;
+      font-family: Verdana, sans-serif;
+      color: white;
+    }
+    .site {
+      text-shadow: 0 2px 2px rgba(0, 0, 0, 0.75), 0 0 9px rgba(0, 0, 0, 0.23);
+      font-weight: 900;
+      line-height: 20px;
+      text-transform: uppercase;
+      width: max-content;
+      display: table;
+    }
+  }
+  .links {
+    display: inline-block;
+    margin: 0 0 0 7px;
+    max-height: 16px;
+  }
+  .vk, .fb {
+    .size(16px);
+    margin: 0 3px;
+    display: inline-block;
+  }
+  .vk {
+    background: url("../img/vk.png");
+  }
+  .fb {
+    background: url("../img/fb.png");
+  }
+  i {
+    color: #626c7b;
+    font-style: normal;
+    font-size: 15px;
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .personal {
+    color: #8292ab;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    .personal {
+      margin: 5px auto 0;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    .top {
+      padding-bottom: 30px;
+      .container {
+        justify-content: center;
+      }
+      .menu {
+        padding-bottom: 15px;
+      }
+    }
+    .bottom {
+      p {
+        justify-content: center;
+      }
+    }
+    .personal {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .top {
+      padding: 20px 0;
+      .right {
+        flex-direction: column;
+        align-items: center;
+        .phone {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .menu {
+      display: none !important;
+    }
+    .bottom {
+      .site {
+        margin-bottom: 10px;
+      }
+      .d-flex {
+        flex-direction: column;
+        i {
+          display: none;
+        }
+        a {
+          margin: 10px 0;
+        }
+        .links {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+

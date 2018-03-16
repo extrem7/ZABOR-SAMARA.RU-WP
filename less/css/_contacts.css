@@ -1,0 +1,17 @@
+.page-contacts .section-title {
+  font-size: 20px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.page-contacts .section-title:before {
+  right: auto;
+  bottom: -20px;
+}
+.page-contacts .section-title:after {
+  width: 100%;
+  bottom: -20px;
+}
+.page-contacts .map .ymaps-2-1-56-controls__control {
+  display: none!important;
+}
